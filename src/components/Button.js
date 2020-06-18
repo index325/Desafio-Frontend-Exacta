@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../styles/button.css";
 
-export default function Button() {
+export default function Button({submitForm, label}) {
   return (
-    <div className="button">
+    <div className="button" onClick={submitForm}>
       <span className="button-label">
-        Continuar
+        {label}
         <span className="button-icon">&gt;</span>
       </span>
     </div>

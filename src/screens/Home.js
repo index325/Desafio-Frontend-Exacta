@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import "../styles/App.css";
 import Header from "../components/Header";
-import SubHeader from "../components/SubHeader";
-import Steps from "../components/Steps";
+import Button from "../components/Button";
 import Form from "../components/Form";
 import axios from "axios";
+import UserContext from "../contexts/users";
+import { useHistory } from "react-router-dom";
 
 function Home() {
   const [expedidores, setExpedidores] = useState([]);
@@ -12,6 +13,22 @@ function Home() {
   const [emissao, setEmissao] = useState("");
   const [expedidor, setExpedidor] = useState("");
   const [sexo, setSexo] = useState("-1");
+
+  const context = useContext(UserContext);
+  const history = useHistory();
+  const submitForm = () => {
+    context.addUser({
+      rg,
+      emissao,
+      expedidor,
+      sexo,
+    });
+    history.push("/list-all");
+  };
+
+  const handleRedirectToList = () => {
+    history.push("/list-all");
+  };
 
   useEffect(() => {
     axios
@@ -26,16 +43,6 @@ function Home() {
   return (
     <>
       <Header />
-      <div className="sub-header-container">
-        <div className="container">
-          <SubHeader />
-        </div>
-      </div>
-      <div className="steps-container">
-        <div className="container">
-          <Steps />
-        </div>
-      </div>
 
       <div className="container">
         <Form
@@ -48,7 +55,11 @@ function Home() {
           expedidor={expedidor}
           emissao={emissao}
           sexo={sexo}
+          submitForm={submitForm}
         />
+        <div className="go-to-list" onClick={handleRedirectToList}>
+          <Button label="Ir para a listagem" />
+        </div>
       </div>
     </>
   );

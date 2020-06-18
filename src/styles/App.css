@@ -26,6 +26,15 @@
   transition: background-color .5s ease;
 }
 
+.go-to-list > .button{
+  display: inline;
+}
+
+.go-to-list{
+  margin-top: 16px;
+  text-align: center;
+}
+
 @media (max-width: 800px) {
   .blue-text{
     font-size: 3vw;

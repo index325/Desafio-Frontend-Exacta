@@ -9,7 +9,7 @@ export default function SelectField(props) {
     <div className="selectfield-container">
       <span className="label">{props.label}</span>
       <select
-        name="expedidores"
+        name=""
         id=""
         className="select"
         onChange={handleChange}
