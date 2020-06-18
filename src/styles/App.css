@@ -1,0 +1,33 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.steps-container {
+  width: 100vw;
+  background-color: #bcbcbc;
+}
+
+.sub-header-container {
+  width: 100vw;
+  background-color: #4c4c4c;
+}
+
+.blue-text {
+  color: #0ad4db;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+
+.choosed {
+  background-color: #494efc;
+  color: white;
+  transition: background-color .5s ease;
+}
+
+@media (max-width: 800px) {
+  .blue-text{
+    font-size: 3vw;
+  }
+}

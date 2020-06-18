@@ -1,0 +1,24 @@
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.menu > nav {
+  margin: 0 16px;
+  padding: 24px;
+}
+
+.header-1 {
+  background-color: #211a1a;
+  color: #cdcdcd;
+}
+
+@media (max-width:470px){
+  .menu {
+    display: flex;
+    flex-direction: column;
+  }
+}

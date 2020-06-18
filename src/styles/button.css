@@ -1,0 +1,14 @@
+.button-label {
+  font-weight: bold;
+  /* font-size: */
+  text-transform: uppercase;
+  color: white;
+}
+
+.button {
+  border: 1px solid #494efc;
+  max-width: 150px;
+  padding: 5px 50px;
+  background-color: #494efc;
+  cursor: pointer;
+}
