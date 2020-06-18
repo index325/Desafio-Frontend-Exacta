@@ -5,7 +5,6 @@ import UserContext from "../contexts/users";
 import DataTable from "react-data-table-component";
 import ArrowDownward from "@material-ui/icons/ArrowDownward";
 import Button from "@material-ui/core/Button";
-import { makeStyles } from "@material-ui/core/styles";
 import { useHistory } from "react-router-dom";
 
 function ListAll() {

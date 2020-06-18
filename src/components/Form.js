@@ -1,14 +1,12 @@
-import React, { useContext } from "react";
+import React from "react";
 import "../styles/form.css";
 import TextField from "./Textfield";
 import RadioButton from "./RadioButton";
 import Button from "./Button";
 import SelectField from "./SelectField";
 import DateField from "./DateField";
-import UserContext from "../contexts/users";
 
 export default function Form(props) {
-  const context = useContext(UserContext);
   console.log(props)
   return (
     <>
