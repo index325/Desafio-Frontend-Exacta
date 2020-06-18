@@ -35,6 +35,15 @@
   text-align: center;
 }
 
+.action-button{
+  min-width: 100px;
+  white-space: nowrap;
+}
+
+.action-button-container{
+  margin: 0px 5px;
+}
+
 @media (max-width: 800px) {
   .blue-text{
     font-size: 3vw;

@@ -2,7 +2,7 @@ import React from "react";
 import InputMask from "react-input-mask";
 import "../styles/textfield.css";
 
-export default function TextField(props) {
+export default function DateField(props) {
   const handleChange = (e) => {
     props.setter(e.target.value);
   };
@@ -10,7 +10,7 @@ export default function TextField(props) {
   return (
     <div className="textfield-container">
       <span className="label">{props.label}</span>
-      <InputMask mask="99/99/9999" onChange={handleChange} className="textfield" />
+      <InputMask mask="99/99/9999" onChange={handleChange} value={props.value} className="textfield" />
     </div>
   );
 }

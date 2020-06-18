@@ -13,6 +13,7 @@ export default function SelectField(props) {
         id=""
         className="select"
         onChange={handleChange}
+        value={props.value}
       >
         {props.expedidores.map((expedidor) => (
           <option value={expedidor.value} key={expedidor.value}>
