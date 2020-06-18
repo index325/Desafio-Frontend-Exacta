@@ -2,8 +2,6 @@ import React, { useEffect, useState, useContext } from "react";
 import "../styles/App.css";
 import Header from "../components/Header";
 import UserContext from "../contexts/users";
-import Form from "../components/Form";
-import axios from "axios";
 import DataTable from "react-data-table-component";
 import ArrowDownward from "@material-ui/icons/ArrowDownward";
 

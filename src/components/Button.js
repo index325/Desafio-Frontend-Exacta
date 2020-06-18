@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import "../styles/button.css";
 
 export default function Button({submitForm, label}) {
