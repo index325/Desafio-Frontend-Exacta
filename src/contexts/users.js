@@ -49,7 +49,8 @@ export const UserProvider = ({ children }) => {
   }, [users]);
 
   useEffect(() => {
-    console.log("entrou")
+    console.log(rgError, expedidorError, sexoError, emissaoError)
+    
     if (rgError || expedidorError || sexoError || emissaoError) {
       setFormDisabled(true);
     } else {

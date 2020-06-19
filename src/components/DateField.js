@@ -36,6 +36,7 @@ export default function DateField(props) {
         onChange={handleChange}
         value={props.value}
         className="textfield"
+        data-testid="emissao-field"
       />
     </div>
   );

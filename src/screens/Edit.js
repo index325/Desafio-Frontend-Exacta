@@ -49,7 +49,7 @@ function Edit() {
     context.setRgError(false);
     context.setEmissaoError(false);
     context.setSexoError(false);
-  }, [context]);
+  }, []);
 
   useEffect(() => {
     let user = context.users.filter((user) => user.id === id)[0];

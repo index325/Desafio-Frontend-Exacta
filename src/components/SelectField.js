@@ -21,6 +21,7 @@ export default function SelectField(props) {
         className="select"
         onChange={handleChange}
         value={props.value}
+        data-testid="expedidor-field"
       >
         {props.expedidores.map((expedidor) => (
           <option value={expedidor.value} key={expedidor.value} disabled={expedidor.value === ""}>

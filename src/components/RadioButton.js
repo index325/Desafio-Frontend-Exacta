@@ -38,6 +38,7 @@ export default function RadioButton(props) {
       className={`radio-button-container radio-button-label ${props.value === props.label ? "choosed" : ""}`}
       id={props.label}
       onClick={handleClick}
+      data-testid={`${props.label}-button`}
     >
       {props.label}
     </div>

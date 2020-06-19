@@ -32,6 +32,7 @@ export default function TextField(props) {
         onChange={handleChange}
         value={props.value}
         className="textfield"
+        data-testid="rg-field"
       />
     </div>
   );
