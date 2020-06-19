@@ -8,7 +8,12 @@ import UserContext from "../contexts/users";
 import { useHistory, useParams } from "react-router-dom";
 
 function Edit() {
-  const [expedidores, setExpedidores] = useState([]);
+  const [expedidores, setExpedidores] = useState([
+    {
+      label: "Selecione",
+      value: "",
+    },
+  ]);
   const [rg, setRg] = useState("");
   const [emissao, setEmissao] = useState("");
   const [expedidor, setExpedidor] = useState("");
@@ -19,6 +24,7 @@ function Edit() {
   const { id } = useParams();
   const submitForm = () => {
     context.updateUser({
+      id,
       rg,
       emissao,
       expedidor,
@@ -39,15 +45,24 @@ function Edit() {
       .then((response) => {
         setExpedidores(response.data);
       });
+    context.setExpedidorError(false);
+    context.setRgError(false);
+    context.setEmissaoError(false);
+    context.setSexoError(false);
+    console.log("lalala")
   }, []);
 
   useEffect(() => {
-    let user = context.users.filter((user) => user.rg === id)[0];
+    let user = context.users.filter((user) => user.id === id)[0];
+    if (!user || user === undefined) {
+      history.push("/list-all");
+    }
+    console.log(user);
     setRg(user.rg);
     setEmissao(user.emissao);
     setExpedidor(user.expedidor);
     setSexo(user.sexo);
-  }, [context.users, id]);
+  }, [context.users, id, history]);
 
   return (
     <>

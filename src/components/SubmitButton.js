@@ -1,16 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../styles/button.css";
+import UserContext from "../contexts/users";
 import ArrowRight from "@material-ui/icons/ArrowRight";
 
-export default function Button({ label, handleRedirectToList }) {
+export default function Button({ label }) {
+  const context = useContext(UserContext);
   return (
-    <button type="button" className="button" onClick={handleRedirectToList}>
+    <button type="submit" className="button" disabled={context.formDisabled}>
       <span
         style={{
           justifyContent: "center",
           alignItems: "center",
           display: "flex",
-          flexDirection: "row",
         }}
         className="button-label"
       >

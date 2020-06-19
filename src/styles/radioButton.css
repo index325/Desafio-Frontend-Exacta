@@ -9,3 +9,25 @@
   text-transform: uppercase;
   font-weight: bold;
 }
+
+@media (max-width: 365px) {
+  .radio-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .radio-button-container{
+    margin: 8px 5px;
+  }
+  .radio-buttons > .label{
+    margin: 24px 5px 5px 5px;
+  }
+  .radio-button-container:last-child{
+    margin-bottom: 24px;
+  }
+  .label{
+    font-size: 4vw;
+  }
+}

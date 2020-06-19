@@ -28,6 +28,8 @@
 
 .go-to-list > .button{
   display: inline;
+  max-width: 300px;
+  cursor: pointer;
 }
 
 .go-to-list{

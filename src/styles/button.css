@@ -10,5 +10,18 @@
   max-width: 150px;
   padding: 5px 50px;
   background-color: #494efc;
+  transition: background-color .5s ease;
+  display: flex;
+  justify-content: center;
+}
+
+.button[type="submit"]{
   cursor: pointer;
+  transition: opacity .5s ease;
+}
+
+.button[type="submit"]:disabled {
+  opacity: 0.4;
+  cursor: default;
+  transition: opacity .5s ease;
 }

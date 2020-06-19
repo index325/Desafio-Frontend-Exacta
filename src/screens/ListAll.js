@@ -14,15 +14,16 @@ function ListAll() {
 
   const sortIcon = <ArrowDownward />;
 
-  const handleExclusion = (rg) => {
-    context.deleteUser(rg);
+  const handleExclusion = (id) => {
+    context.deleteUser(id);
   };
 
-  const handleRedirectToEdition = (rg) => {
-    history.push(`/edit/${rg}`);
+  const handleRedirectToEdition = (id) => {
+    history.push(`/edit/${id}`);
   };
 
   const columns = [
+    { name: "ID", selector: "id", visible: false},
     { name: "RG", selector: "rg" },
     { name: "Expedidor", selector: "expedidor" },
     { name: "Sexo", selector: "sexo", sortable: true },
@@ -34,8 +35,9 @@ function ListAll() {
           <Button
             variant="contained"
             color="primary"
-            onClick={() => handleRedirectToEdition(row.rg)}
+            onClick={() => handleRedirectToEdition(row.id)}
             className="action-button"
+            style={{ marginRight: 5, marginLeft: 5, minWidth: 100 }}
           >
             Editar
           </Button>
@@ -43,8 +45,9 @@ function ListAll() {
           <Button
             variant="contained"
             color="secondary"
-            onClick={() => handleExclusion(row.rg)}
+            onClick={() => handleExclusion(row.id)}
             className="action-button"
+            style={{ marginRight: 5, marginLeft: 5, minWidth: 100 }}
           >
             Excluir
           </Button>

@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../styles/radioButton.css";
+import UserContext from "../contexts/users";
 
 export default function RadioButton(props) {
+  const context = useContext(UserContext);
   const handleClick = (e) => {
     //se quem eu tiver clicado, for um ID existente, então:
     if (document.getElementById(String(e.target.id))) {
@@ -11,12 +13,13 @@ export default function RadioButton(props) {
           .getElementsByClassName("choosed")[0]
           .classList.remove("choosed");
         props.setter("0");
+        context.setSexoError(true)
       }
       //se não existir ninguém que já foi clicado, então:
       else if (!document.getElementsByClassName("choosed")[0]) {
         document.getElementById(e.target.id).classList.add("choosed");
         props.setter(e.target.id);
-
+        context.setSexoError(false)
       }
       //se existir alguém que já foi clicado, porém, não é quem eu estou clicando, retire o status escolhido desse, e coloque em quem eu estou clicando
       else {
@@ -26,6 +29,7 @@ export default function RadioButton(props) {
 
         document.getElementById(e.target.id).classList.add("choosed");
         props.setter(e.target.id);
+        context.setSexoError(false)
       }
     }
   };

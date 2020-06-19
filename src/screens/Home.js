@@ -6,9 +6,15 @@ import Form from "../components/Form";
 import axios from "axios";
 import UserContext from "../contexts/users";
 import { useHistory } from "react-router-dom";
+import { uuid } from "uuidv4";
 
 function Home() {
-  const [expedidores, setExpedidores] = useState([]);
+  const [expedidores, setExpedidores] = useState([
+    {
+      label: "Selecione",
+      value: "",
+    },
+  ]);
   const [rg, setRg] = useState("");
   const [emissao, setEmissao] = useState("");
   const [expedidor, setExpedidor] = useState("");
@@ -18,10 +24,11 @@ function Home() {
   const history = useHistory();
   const submitForm = () => {
     context.addUser({
-      rg,
-      emissao,
-      expedidor,
-      sexo,
+      rg: rg,
+      emissao: emissao,
+      expedidor: expedidor,
+      sexo: sexo,
+      id: uuid(),
     });
     history.push("/list-all");
   };
@@ -38,6 +45,10 @@ function Home() {
       .then((response) => {
         setExpedidores(response.data);
       });
+    context.setExpedidorError(true);
+    context.setRgError(true);
+    context.setEmissaoError(true);
+    context.setSexoError(true);
   }, []);
 
   return (
@@ -57,8 +68,11 @@ function Home() {
           sexo={sexo}
           submitForm={submitForm}
         />
-        <div className="go-to-list" onClick={handleRedirectToList}>
-          <Button label="Ir para a listagem" />
+        <div className="go-to-list">
+          <Button
+            label="Ir para a listagem"
+            handleRedirectToList={handleRedirectToList}
+          />
         </div>
       </div>
     </>
