@@ -7,6 +7,10 @@
 - Babel
 - Webpack
 - ESLint + Prettier
+- React DataTable Component (Listagem)
+- Material-UI Icons (Ícone da seta)
+- CSS puro (sem nenhum framework CSS)
+
 
 ## :running: Run the project:
 ```shell
@@ -21,6 +25,9 @@
   
   # Start the application
   - yarn dev
+  
+  # Test the application
+  - yarn test
   
 ```
 
