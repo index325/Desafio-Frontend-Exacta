@@ -11,6 +11,10 @@
 - Material-UI Icons (Ícone da seta)
 - CSS puro (sem nenhum framework CSS)
 
+## Tela de exemplo:
+<h1 align="center">
+    <img alt="Example" title="Example" src="./public/example.PNG" width="500px" />
+</h1>
 
 ## :running: Run the project:
 ```shell
