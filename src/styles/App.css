@@ -46,8 +46,289 @@
   margin: 0px 5px;
 }
 
+.button-label {
+  font-weight: bold;
+  /* font-size: */
+  text-transform: uppercase;
+  color: white;
+}
+
+.button {
+  border: 1px solid #494efc;
+  max-width: 150px;
+  padding: 5px 50px;
+  background-color: #494efc;
+  transition: background-color .5s ease;
+  display: flex;
+  justify-content: center;
+}
+
+.button[type="submit"]{
+  cursor: pointer;
+  transition: opacity .5s ease;
+}
+
+.button[type="submit"]:disabled {
+  opacity: 0.4;
+  cursor: default;
+  transition: opacity .5s ease;
+}
+
+.form-content {
+  margin-top: 10vh;
+  text-align: center;
+}
+
+.form-title {
+  font-weight: bold;
+  font-size: 44px;
+  text-transform: uppercase;
+}
+
+.form-horizontal-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.radio-buttons > .label{
+    padding: 5px 8px;
+    margin: 30px 5px;
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.menu > nav {
+  margin: 0 16px;
+  padding: 24px;
+}
+
+.header-1 {
+  background-color: #211a1a;
+  color: #cdcdcd;
+}
+
+.radio-button-container {
+  border: 2px solid black;
+  padding: 5px 15px;
+  margin: 30px 5px;
+  cursor: pointer;
+}
+
+.radio-button-label {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.selectfield-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0px 5px;
+}
+
+.select {
+  box-sizing: border-box;
+  height: 35px;
+  border: 2px solid black;
+}
+
+.steps {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.step {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.step-number {
+  margin-right: 10px;
+  border: 1px solid #211a1a;
+  border-radius: 100px;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  background-color: #211a1a;
+}
+
+.step.active > .step-number {
+  color: #0ad4db;
+}
+
+.step.done > .step-number {
+  color: white;
+}
+
+.step.pending > .step-number {
+    background-color: transparent;
+}
+
+.step.done, .step.pending {
+  opacity: 0.4;
+}
+
+.step-text {
+  text-transform: uppercase;
+}
+
+@media (max-width:750px){
+  .step-text {
+    font-size: 3vw;
+  }
+  .step-number{
+    font-size: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .steps {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+.sub-header-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 16px 0px 8px 0px;
+  font-weight: bold;
+}
+
+.principal {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  padding: 0px;
+  margin: 0px;
+}
+
+.sub-header-item > .cpf {
+  font-size: 12px;
+}
+
+.sub-header-item > .cpf > .white-text {
+  color: white;
+}
+
+.textfield-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 0px 5px;
+}
+
+.textfield {
+  border-radius: 0px;
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-radius: 0px;
+  padding: 8px 2px;
+  max-width: 300px;
+  width: 300px;
+  outline: none;
+}
+
+.label {
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+#date-field-container.invalid > .textfield:focus, #rg-field-container.invalid > .textfield:focus {
+  border: 2px solid red;
+  color: red;
+}
+
+.textfield:focus {
+  border: 2px solid #494efc;
+  color: #494efc;
+}
+
+.textfield:focus + .label {
+  color: #494efc;
+  background-color: yellow;
+}
+
+
+@media (max-width:400px){
+  .step-text {
+    font-size: 4vw;
+  }
+  .step-number{
+    font-size: 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width:500px){
+  .menu {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 @media (max-width: 800px) {
+  .sub-header-items {
+    flex-direction: column;
+  }
+  .sub-header-item{
+    margin: 8px
+  }
+  .principal {
+    font-size: 6vw;
+  }
+  .sub-header-item > .cpf {
+    font-size: 3vw;
+  }
   .blue-text{
     font-size: 3vw;
+  }
+}
+
+@media (max-width: 365px) {
+  .radio-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .radio-button-container{
+    margin: 8px 5px;
+  }
+  .radio-buttons > .label{
+    margin: 24px 5px 5px 5px;
+  }
+  .radio-button-container:last-child{
+    margin-bottom: 24px;
+  }
+  .label{
+    font-size: 4vw;
   }
 }

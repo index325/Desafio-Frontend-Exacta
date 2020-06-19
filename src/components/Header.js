@@ -1,5 +1,4 @@
 import React from "react";
-import "../styles/App.css";
 import Navbar from "../components/Navbar";
 import SubHeader from "../components/SubHeader";
 import Steps from "../components/Steps";

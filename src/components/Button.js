@@ -1,5 +1,4 @@
 import React from "react";
-import "../styles/button.css";
 import ArrowRight from "@material-ui/icons/ArrowRight";
 
 export default function Button({ label, handleRedirectToList }) {

@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import "../styles/radioButton.css";
 import UserContext from "../contexts/users";
 
 export default function RadioButton(props) {

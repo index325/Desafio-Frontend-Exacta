@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import InputMask from "react-input-mask";
-import "../styles/textfield.css";
 import moment from "moment";
 import { dateRegex } from "../utils/regex";
 import UserContext from "../contexts/users";

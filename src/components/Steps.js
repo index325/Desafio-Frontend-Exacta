@@ -1,5 +1,4 @@
 import React from "react";
-import "../styles/step.css";
 
 export default function Steps() {
   return (

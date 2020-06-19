@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import "../styles/selectField.css";
 import UserContext from "../contexts/users";
 
 export default function SelectField(props) {

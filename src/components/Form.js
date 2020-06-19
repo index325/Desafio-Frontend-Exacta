@@ -1,5 +1,4 @@
 import React from "react";
-import "../styles/form.css";
 import TextField from "./Textfield";
 import RadioButton from "./RadioButton";
 import SubmitButton from "./SubmitButton";

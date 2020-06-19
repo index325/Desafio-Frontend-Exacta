@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import "../styles/textfield.css";
 import InputMask from "react-input-mask";
 import { rg } from "cpf-rg-validator";
 import { rgRegex } from "../utils/regex";
