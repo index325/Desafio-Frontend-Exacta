@@ -45,12 +45,6 @@ export const UserProvider = ({ children }) => {
   }
 
   useEffect(() => {
-    console.log(users);
-  }, [users]);
-
-  useEffect(() => {
-    console.log(rgError, expedidorError, sexoError, emissaoError)
-    
     if (rgError || expedidorError || sexoError || emissaoError) {
       setFormDisabled(true);
     } else {
@@ -59,9 +53,7 @@ export const UserProvider = ({ children }) => {
   }, [rgError, expedidorError, sexoError, emissaoError]);
 
   function updateUser(user) {
-    console.log(users);
     let newUsers = users.map((stateUser) => {
-      console.log(stateUser);
       if (stateUser.id === user.id) {
         return {
           id: user.id,

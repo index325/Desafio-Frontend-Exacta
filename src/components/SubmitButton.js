@@ -4,9 +4,6 @@ import ArrowRight from "@material-ui/icons/ArrowRight";
 
 export default function Button({ label }) {
   const context = useContext(UserContext);
-  useEffect(()=>{
-    console.log(document.getElementById('teste').disabled)
-  },[])
   return (
     <button
       type="submit"

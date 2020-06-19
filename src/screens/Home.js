@@ -30,11 +30,11 @@ function Home() {
       sexo: sexo,
       id: uuid(),
     });
-    history.push("/list-all");
+    if (history) history.push("/list-all");
   };
 
   const handleRedirectToList = () => {
-    history.push("/list-all");
+    if (history) history.push("/list-all");
   };
 
   useEffect(() => {
@@ -72,6 +72,7 @@ function Home() {
           <Button
             label="Ir para a listagem"
             handleRedirectToList={handleRedirectToList}
+            testRoute="home"
           />
         </div>
       </div>

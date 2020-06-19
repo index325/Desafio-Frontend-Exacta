@@ -1,9 +1,9 @@
 import React from "react";
 import ArrowRight from "@material-ui/icons/ArrowRight";
 
-export default function Button({ label, handleRedirectToList }) {
+export default function Button({ label, handleRedirectToList, testRoute }) {
   return (
-    <button type="button" className="button" onClick={handleRedirectToList}>
+    <button type="button" className="button" onClick={handleRedirectToList} data-testid={`go-to-list-${testRoute}`}>
       <span
         style={{
           justifyContent: "center",

@@ -19,7 +19,8 @@ function ListAll() {
   };
 
   const handleRedirectToEdition = (id) => {
-    history.push(`/edit/${id}`);
+    if (history)
+      history.push(`/edit/${id}`);
   };
 
   const columns = [
@@ -38,6 +39,7 @@ function ListAll() {
             onClick={() => handleRedirectToEdition(row.id)}
             className="action-button"
             style={{ marginRight: 5, marginLeft: 5, minWidth: 100 }}
+            data-testid={`editar-${row.rg}`}
           >
             Editar
           </Button>
@@ -48,6 +50,7 @@ function ListAll() {
             onClick={() => handleExclusion(row.id)}
             className="action-button"
             style={{ marginRight: 5, marginLeft: 5, minWidth: 100 }}
+            data-testid={`excluir-${row.rg}`}
           >
             Excluir
           </Button>

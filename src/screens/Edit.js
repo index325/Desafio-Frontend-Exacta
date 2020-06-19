@@ -30,11 +30,11 @@ function Edit() {
       expedidor,
       sexo,
     });
-    history.push("/list-all");
+    if (history) history.push("/list-all");
   };
 
   const handleRedirectToList = () => {
-    history.push("/list-all");
+    if (history) history.push("/list-all");
   };
 
   useEffect(() => {
@@ -54,7 +54,7 @@ function Edit() {
   useEffect(() => {
     let user = context.users.filter((user) => user.id === id)[0];
     if (!user || user === undefined) {
-      history.push("/list-all");
+      if (history) history.push("/list-all");
     }
     console.log(user);
     setRg(user.rg);
@@ -81,7 +81,7 @@ function Edit() {
           submitForm={submitForm}
         />
         <div className="go-to-list" onClick={handleRedirectToList}>
-          <Button label="Ir para a listagem" />
+          <Button label="Ir para a listagem" testRoute="edit"/>
         </div>
       </div>
     </>

@@ -7,7 +7,7 @@ import UserContext from "../contexts/users";
 export default function TextField(props) {
   const context = useContext(UserContext);
   const validation = (value) => {
-    if(!value.match(rgRegex)){
+    if (!value.match(rgRegex)) {
       context.setRgError(true);
     }
     if (rg(value) && value.match(rgRegex)) {
