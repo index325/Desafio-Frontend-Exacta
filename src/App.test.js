@@ -13,16 +13,6 @@ import {
   MemoryRouter,
 } from "react-router-dom";
 
-const wait = (amount = 0) => {
-  return new Promise((resolve) => setTimeout(resolve, amount));
-};
-
-const actWait = async (amount = 0) => {
-  await act(async () => {
-    await wait(amount);
-  });
-};
-
 Enzyme.configure({ adapter: new Adapter() });
 describe("App component", () => {
   test("Tenta cadastrar um usuário com rg errado", async () => {
