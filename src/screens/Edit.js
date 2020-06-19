@@ -56,7 +56,6 @@ function Edit() {
     if (!user || user === undefined) {
       if (history) history.push("/list-all");
     }
-    console.log(user);
     setRg(user.rg);
     setEmissao(user.emissao);
     setExpedidor(user.expedidor);
