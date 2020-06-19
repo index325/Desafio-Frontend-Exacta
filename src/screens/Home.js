@@ -49,7 +49,7 @@ function Home() {
     context.setRgError(true);
     context.setEmissaoError(true);
     context.setSexoError(true);
-  }, []);
+  }, [context]);
 
   return (
     <>
